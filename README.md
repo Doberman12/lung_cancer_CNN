@@ -1,36 +1,46 @@
-# Klasyfikacja obrazów płuc za pomocą CNN
+# Lung Cancer Image Classification using CNN
 
-## Opis
+## Description
 
-Ten projekt wykorzystuje konwolucyjne sieci neuronowe (CNN) do klasyfikacji obrazów histopatologicznych płuc. Celem jest automatyczne rozpoznawanie trzech kategorii: gruczolakoraka, zdrowych płuc i raka kolczystokomórkowego.
+This project uses **Convolutional Neural Networks (CNN)** to classify histopathological images of lungs. The goal is to automatically recognize three categories: **adenocarcinoma**, **healthy lungs**, and **squamous cell carcinoma**.
 
-## Zbiór danych
+## Dataset
 
-Projekt korzysta z publicznie dostępnego zbioru danych "Lung Cancer Histopathological Images" z Kaggle. Zbiór zawiera obrazy histopatologiczne płuc, podzielone na trzy kategorie.
+The project uses the publicly available dataset "**Lung Cancer Histopathological Images**" from Kaggle. The dataset contains histopathological lung images, divided into three categories.
 
 ## Model
 
-Zbudowano dwa modele CNN:
+Two CNN models were built:
 
-1. **Model autorski:** Zaprojektowany od podstaw model CNN z kilkoma warstwami konwolucyjnymi, max pooling i gęstymi.
-2. **Model pretrenowany (VGG16):** Wykorzystano pretrenowany model VGG16 z wagami ImageNet, dodając do niego własne warstwy klasyfikacyjne.
+1. **Custom Model:** A CNN model designed from scratch with multiple convolutional layers, max pooling, and dense layers.
+2. **Pretrained Model (VGG16):** A pretrained VGG16 model with ImageNet weights, enhanced with custom classification layers.
 
-## Wyniki
+## Results
 
-Oba modele osiągnęły wysoką dokładność na zbiorze walidacyjnym:
+Both models achieved high accuracy on the validation set:
 
-* Model autorski: **97.20%** (ostatnia epoka), **98.16%** (średnia z ostatnich 5 epok), **99.07%** (najwyższa wartość)
-* Model VGG16: **97.70%** (ostatnia epoka), **97.71%** (średnia z ostatnich 5 epok), **97.77%** (najwyższa wartość)
+* **Custom Model:** 
+    * **97.20%** (last epoch)
+    * **98.16%** (average of the last 5 epochs)
+    * **99.07%** (highest value)
+    
+* **VGG16 Model:**  
+    * **97.70%** (last epoch)  
+    * **97.71%** (average of the last 5 epochs)  
+    * **97.77%** (highest value)
 
-## Instrukcje
+## Instructions
 
-Aby uruchomić projekt:
+To run the project:
 
-1. Pobierz zbiór danych "Lung Cancer Histopathological Images" z Kaggle.
-2. Zaimportuj notebook do Google Colab.
-3. Zainstaluj wymagane biblioteki (TensorFlow, Keras, scikit-learn, seaborn).
-4. Uruchom notebook.
+1. Download the dataset "**Lung Cancer Histopathological Images**" from Kaggle.
+2. Import the notebook into **Google Colab**.
+3. Install the required libraries:
+    ```bash
+    pip install tensorflow keras scikit-learn seaborn
+    ```
+4. Run the notebook.
 
-## Wnioski
+## Conclusion
 
-Projekt pokazuje, że CNN mogą być skutecznie wykorzystywane do klasyfikacji obrazów histopatologicznych płuc. Oba modele osiągnęły wysoką dokładność, co sugeruje ich potencjał w zastosowaniach medycznych.
+This project demonstrates that CNNs can be effectively used for the classification of histopathological lung images. Both models achieved high accuracy, suggesting their potential for medical applications.
